@@ -24,3 +24,13 @@ After the Migration Project is loaded, change the theme for your application.
 
 To change the logo, you can upload a new image file to use.
 
+
+
+## Colors
+
+| Theme  | Main   | Light  | Dark   | Border | Hover  | Active |
+| -----  | ------ | ------ | ------ | ------ | ------ | ------ | 
+| Blue   | 00849b | 0098b3 | 006c80 | 00414d | 005766 | 002b33 |
+| Green  | 247530 | 2a8938 | 1e6228 | 123b18 | 184e20 | 0c2710 | 
+| Purple | 2b2b6e | 
+|        | 30%    | 35%    | 25%    | 15%    | 20%    | 10%    | 
