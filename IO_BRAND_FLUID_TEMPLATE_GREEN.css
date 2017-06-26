@@ -1,0 +1,803 @@
+/*   
+Green Theme Colors
+Dark: 	#1e6228 25%			#006c80;
+Main: 	#247530 30%			#00849b; 
+Light: 	#2a8938 35%			#0098b3;
+Border: #123b18 15%			#00414d; 
+Hover: 	#184e20 20%			#005766; 
+Active: #0c2710 10%			#002b33;
+https://www.w3schools.com/colors/colors_picker.asp
+*/
+
+/*
+ *  PT_BRAND_FLUID_BANNER
+ *  Branding Fluid Stylesheet for the Banner area (excluding images)
+ */
+
+
+/* Banner Bar */
+.ps_header_bar
+{
+   border-bottom-color:%PT_BANNER_BORDER_COLOR;
+   %BV(background-image:%PT_BANNER_BACKGROUND_IMAGE); /* gradient for background */
+   background-color:%PT_BANNER_BACKGROUND_COLOR; /* set background image to non and set background color to use a flat color versus gradient */
+   color:%PT_BANNER_TEXT_COLOR; /* default text color in the header */
+}
+
+
+/* Generic button settings for the header bar */
+.ps_header_bar .ps_box-button .ps-button,
+.ps_header_bar .ps_box-button .ps-button:link,
+.ps_header_bar .ps_box-button .ps-button:hover
+{
+   background-color:%PT_BANNER_BUTTON_BACKGROUND_COLOR; /* override button style defaults to keep transparent background */
+   border-color:%PT_BANNER_BUTTON_BORDER_COLOR; /* keep border transparent */
+   color:%PT_BANNER_BUTTON_TEXT_COLOR; /* maintain color of button on hover */
+   %BP(box-shadow:%PT_BANNER_BUTTON_BOXSHADOW); /* use box shadow for hovering only */
+}
+
+/* Generic button hover settings for header bar */
+.ps_header_bar .ps_box-button:not(.psc_disabled) .ps-button:hover
+{
+   background-color:%PT_BANNER_BUTTON_BACKGROUND_COLOR_HOVER;
+   border-color:%PT_BANNER_BUTTON_BORDER_COLOR_HOVER;
+   color:%PT_BANNER_BUTTON_TEXT_COLOR_HOVER;
+   %BP(box-shadow:%PT_BANNER_BUTTON_BOXSHADOW_HOVER);
+}
+
+/* RTL Toggle for generic hover */
+:root.psc_dir-rtl .ps_header_bar .ps_box-button:not(.psc_disabled) .ps-button:hover
+{
+   %BP(box-shadow:%PT_BANNER_BUTTON_BOXSHADOW_HOVER_RTL);
+}
+
+/* Generic button active settings */
+.ps_header_bar .ps_box-button:not(.psc_disabled) .ps-button:active,
+.ps_header_bar .ps_box-button:not(.psc_disabled) .ps-button:hover:active,
+:root.psc_dir-rtl .ps_header_bar .ps_box-button:not(.psc_disabled) .ps-button:active,
+:root.psc_dir-rtl .ps_header_bar .ps_box-button:not(.psc_disabled) .ps-button:hover:active
+{
+   background-color:%PT_BANNER_BUTTON_BACKGROUND_COLOR_ACTIVE;
+   color:%PT_BANNER_BUTTON_TEXT_COLOR_ACTIVE;
+   %BP(box-shadow:%PT_BANNER_BUTTON_BOXSHADOW_ACTIVE);
+}
+
+/* Actual button hover settings */
+.ps_header_bar .ps_box-button:not(.psc_disabled) .ps-button:hover,
+:root.psc_dir-rtl .ps_header_bar .ps_box-button:not(.psc_disabled) .ps-button:hover
+{
+   background-color:%PT_BANNER_BUTTON_TRUE_BG_COLOR_HOVER;
+   %BP(box-shadow:%PT_BANNER_BUTTON_TRUE_BXSHADOW_HOVER);
+}
+
+/* Actual button active settings */
+.ps_header_bar .ps_box-button:not(.psc_disabled) .ps-button:active,
+:root.psc_dir-rtl .ps_header_bar .ps_box-button:not(.psc_disabled) .ps-button:active
+{
+   background-color:%PT_BANNER_BUTTON_TRUE_BG_COLOR_ACTIVE;
+   %BP(box-shadow:%PT_BANNER_BUTTON_TRUE_BXSHADOW_ACTIVE);
+}
+
+/* Global search button PRESSED state */
+.ps_header_bar .ps_box-button.ps_header-gsearch:not(.psc_disabled) .ps-button[aria-expanded="true"]
+{
+   background-color:%PT_BANNER_SEARCH_PRESSED_BG_COLOR; /* pressed state of button */
+}
+
+/* Back Navigation button settings OR Standard text buttons (if any ) */
+.ps_box-button.ps_button_backnav .ps-button,
+.ps_box-button.ps_button_backnav .ps-button:link,
+.ps_box-button.ps_button_backnav .ps-button:not(.psc_disabled) .ps-button:hover,
+.ps_box-button.ps_button_stdheader .ps-button,
+.ps_box-button.ps_button_stdheader .ps-button:link,
+.ps_box-button.ps_button_stdheader .ps-button:not(.psc_disabled) .ps-button:hover
+{
+   text-shadow:%PT_BANNER_BACK_TEXTSHADOW;
+   box-shadow:%PT_BANNER_BACK_BOXSHADOW;
+   border-color:%PT_BANNER_BACK_BORDER_COLOR;
+   border-bottom-color:%PT_BANNER_BACK_BORDER_BOTTOM_COLOR;
+   background-image:%PT_BANNER_BACK_BACKGROUND_IMAGE;
+   background-color:%PT_BANNER_BACK_BACKGROUND_COLOR; /* set background-image to none and set background-color to specify a flat color */
+   color:%PT_BANNER_BACK_TEXT_COLOR;
+}
+
+/* Back nav/text button hover colors */
+.ps_box-button.ps_button_backnav:not(.psc_disabled) .ps-button:hover,
+.ps_box-button.ps_button_stdheader:not(.psc_disabled) .ps-button:hover
+{
+   %BV(background-image:%PT_BANNER_BACK_BACKGROUND_IMAGE_HOVER);
+   background-color:%PT_BANNER_BACK_BACKGROUND_COLOR_HOVER; /* set background-image to none and set background-color to specify a flat color */
+   color:%PT_BANNER_BACK_TEXT_COLOR_HOVER;
+   border-color:%PT_BANNER_BACK_BORDER_COLOR_HOVER;
+   border-bottom-color:%PT_BANNER_BACK_BORDER_BOTTOM_COLOR_HOVER;
+   %BP(box-shadow:%PT_BANNER_BACK_BOXSHADOW_HOVER);
+}
+
+/* Back Nav/Text button active colors */
+.ps_box-button.ps_button_backnav:not(.psc_disabled) .ps-button:active,
+.ps_box-button.ps_button_backnav:not(.psc_disabled) .ps-button:hover:active,
+.ps_box-button.ps_button_stdheader:not(.psc_disabled) .ps-button:active,
+.ps_box-button.ps_button_stdheader:not(.psc_disabled) .ps-button:hover:active
+{
+   color:%PT_BANNER_BACK_TEXT_COLOR_ACTIVE;
+   %BV(background-image:%PT_BANNER_BACK_BACKGROUND_IMAGE_ACTIVE);
+   background-color:%PT_BANNER_BACK_BACKGROUND_COLOR_ACTIVE; /* set background-image to none and set background-color to specify a flat color */
+   %BP(box-shadow:%PT_BANNER_BACK_BOXSHADOW_ACTIVE);
+}
+
+/* general overrides for buttons within sections of the header bar */
+.ps_header_bar .ps_actions_cont .ps_system_cont .ps-button,
+.ps_header_bar .ps_header_button .ps-button,
+.ps_header_bar .ps_header_button .ps-button:link,
+:root.psc_dir-rtl .ps_header_bar .ps_actions_cont .ps_system_cont .ps-button,
+:root.psc_dir-rtl .ps_header_bar .ps_header_button .ps-button,
+:root.psc_dir-rtl .ps_header_bar .ps_header_button .ps-button:link
+{
+   %BP(box-shadow:%PT_BANNER_BUTTON_GENERAL_BOXSHADOW);
+}
+
+/* Specific navbar button settings */
+.ps_header_bar .ps_actions_cont .ps_system_cont .ps_header-navbar .ps-button,
+:root.psc_dir-rtl .ps_header_bar .ps_actions_cont .ps_system_cont .ps_header-navbar .ps-button
+{
+   border-%AlignStart-color:%PT_BANNER_NAVBAR_SIDE_BORDER_COLOR;
+   %BV(background-image:%PT_BANNER_NAVBAR_BACKGROUND_IMAGE);
+   background-color:%PT_BANNER_NAVBAR_BACKGROUND_COLOR; /* set background-image to none and set background-color to specify a flat color */
+   %BP(box-shadow:%PT_BANNER_NAVBAR_BOXSHADOW);
+}
+
+/* Specific navbar button hover settings */
+.ps_header_bar .ps_actions_cont .ps_system_cont .ps_header-navbar .ps-button:hover,
+:root.psc_dir-rtl .ps_header_bar .ps_actions_cont .ps_system_cont .ps_header-navbar .ps-button:hover
+{
+   background:%PT_BANNER_NAVBAR_BACKGROUND_HOVER; /* special color for navbar - hover */
+   %BP(box-shadow:%PT_BANNER_NAVBAR_BOXSHADOW_HOVER);
+}
+
+/* Specific navbar button active settings */
+.ps_header_bar .ps_actions_cont .ps_system_cont .ps_header-navbar .ps-button:active,
+:root.psc_dir-rtl .ps_header_bar .ps_actions_cont .ps_system_cont .ps_header-navbar .ps-button:active
+{
+   background:%PT_BANNER_NAVBAR_BACKGROUND_ACTIVE; /* special color for navbar - active */
+   %BP(box-shadow:%PT_BANNER_NAVBAR_BOXSHADOW_ACTIVE);
+}
+
+/* Specific title selector settings for dropdown in Activity Guide and Master/Detail when the title becomes a "selector" */
+.ps_header_bar .psc_title-selector.psc_rowact:hover /* modified to add header bar specifics */
+{
+   background-color:%PT_TITLE_SELECTOR_BACKGROUND_COLOR_HOVER;
+}
+
+
+/* Background color for the Search Tray */
+.ps_header_bar .pts_gsearch_tray
+{
+   background-color:%PT_SEARCH_TRAY_BACKGROUND_COLOR; /* Search tray background color */
+}
+
+/* Search category dropdown */
+.ps_header_bar .pts_gsearch_cat .ps-dropdown {%PT_SEARCH_TRAY_CATEGORY_CSS}
+
+/* Search keyword input */
+.ps_header_bar .pts_gsearch_input .ps-edit {%PT_SEARCH_TRAY_KEYWORD_CSS}
+
+/* Search execute button */
+.ps_header_bar .pts_gsearch_go .ps-button {%PT_SEARCH_TRAY_GOBUTTON_CSS}
+
+/* Notifications - badge */
+.ps_header_button.psc_badge-text > .ps-button-wrapper > .ps-button > .ps-text
+{
+   border-color: %PT_BANNER_BUTTON_BADGE_BORDER_COLOR;
+   background-color:%PT_BANNER_BUTTON_BADGE_BG_COLOR;
+   color:%PT_BANNER_BUTTON_BADGE_BORDER_COLOR;
+}
+
+
+/* Banner Bar END */
+
+/* Confirmation Area */
+.psc_confirmation-area
+{
+   background:%PT_CONFIRMATION_BACKGROUND;
+   color:%PT_CONFIRMATION_TEXT_COLOR;
+   %BP(text-shadow:%PT_CONFIRMATION_TEXTSHADOW);
+   border-color:%PT_CONFIRMATION_BORDER_COLOR;
+}
+
+/* RTL Support to invert the text shadow direction */
+:root.psc_dir-rtl .psc_confirmation-area
+{
+   %BP(text-shadow:%PT_CONFIRMATION_TEXTSHADOW_RTL);
+}
+
+/* End Confirmation Area */
+
+/* Guided Mode */
+/* Separator between the notification button and the GUIDED buttons (next/previous/submit) */
+.psc_mode-guided:not(.psc_mode-fscreen-search) .ps_header_bar .ps_header-notify
+{
+   border-%AlignEnd-color:%PT_BANNER_GUIDED_NOTIFICATION_SEPARATOR;
+}
+
+/* Submit button specific settings */
+.ps_box-button.ps_process-submit > .ps-button-wrapper > .ps-button
+{
+   background-color:%PT_BANNER_SUBMIT_BACKGROUND_COLOR;
+   text-shadow:%PT_BANNER_SUBMIT_TEXTSHADOW;
+   border-color:%PT_BANNER_SUBMIT_BORDER_COLOR;
+   color:%PT_BANNER_SUBMIT_TEXT_COLOR;
+}
+
+/* RTL Submit button settings */
+:root.psc_dir-rtl .ps_box-button.ps_process-submit > .ps-button-wrapper > .ps-button
+{
+   text-shadow:%PT_BANNER_SUBMIT_TEXTSHADOW_RTL;
+}
+
+/* Submit button hover settings */
+.ps_box-button.ps_process-submit > .ps-button-wrapper > .ps-button:hover,
+:root.psc_dir-rtl .ps_box-button.ps_process-submit > .ps-button-wrapper > .ps-button:hover
+{
+   background-color:%PT_BANNER_SUBMIT_BACKGROUND_COLOR_HOVER;
+   border-color:%PT_BANNER_SUBMIT_BORDER_COLOR_HOVER;
+   box-shadow:%PT_BANNER_SUBMIT_BOXSHADOW_HOVER;
+   text-shadow:%PT_BANNER_SUBMIT_TEXTSHADOW_HOVER;
+   color:%PT_BANNER_SUBMIT_TEXT_COLOR_HOVER;
+}
+
+/* Submit button active settings */
+.ps_box-button.ps_process-submit > .ps-button-wrapper > .ps-button:active,
+.ps_box-button.ps_process-submit > .ps-button-wrapper > .ps-button:hover:active,
+:root.psc_dir-rtl .ps_box-button.ps_process-submit > .ps-button-wrapper > .ps-button:active,
+:root.psc_dir-rtl .ps_box-button.ps_process-submit > .ps-button-wrapper > .ps-button:hover:active
+{
+   background-color:%PT_BANNER_SUBMIT_BACKGROUND_COLOR_ACTIVE;
+   text-shadow:%PT_BANNER_SUBMIT_TEXTSHADOW_ACTIVE;
+   border-color:%PT_BANNER_SUBMIT_BORDER_COLOR_ACTIVE;
+   box-shadow:%PT_BANNER_SUBMIT_BOXSHADOW_ACTIVE;
+   color:%PT_BANNER_SUBMIT_TEXT_COLOR_ACTIVE;
+}
+
+/* End Guided *//*
+ *  PT_BRAND_FLUID_PANEL
+ *  Brand Side Panel Buttons / images 
+ */
+
+/* Side 1 Panel - Navigation/Action */
+
+/* generic styling but primarily assigned to side 1 */
+.ps_box-button.psc_panel-button > .ps-button-wrapper >  .ps-button,
+.ps_box-button.pst_panel-button > .ps-button-wrapper >  .ps-button
+{
+  %BP(background:%PT_PANEL_TAB_SIDE1_BACKGROUND);
+  border-color:%PT_PANEL_TAB_SIDE1_BORDER_COLOR; 
+}
+
+.ps_box-button.psc_panel-button > .ps-button-wrapper >  .ps-button:hover,
+.ps_box-button.pst_panel-button > .ps-button-wrapper >  .ps-button:hover
+{
+	%BP(background:%PT_PANEL_TAB_SIDE1_BACKGROUND_HOVER);
+    %BP(box-shadow:%PT_PANEL_TAB_SIDE1_BOXSHADOW_HOVER); /*BYPASSRTL */
+}
+
+:root.psc_dir-rtl .ps_box-button.psc_panel-button > .ps-button-wrapper >  .ps-button:hover,
+:root.psc_dir-rtl .ps_box-button.pst_panel-button > .ps-button-wrapper >  .ps-button:hover
+{
+    %BP(box-shadow:%PT_PANEL_TAB_SIDE1_BOXSHADOW_HOVER_RTL); /* BYPASSRTL */
+}
+
+.ps_box-button.psc_panel-button > .ps-button-wrapper >  .ps-button:active,
+.ps_box-button.pst_panel-button > .ps-button-wrapper >  .ps-button:active
+{
+    background: %PT_PANEL_TAB_SIDE1_BACKGROUND_ACTIVE;
+    %BP(box-shadow:%PT_PANEL_TAB_SIDE1_BOXSHADOW_ACTIVE);  /* BYPASSRTL */
+}
+
+:root.psc_dir-rtl .ps_box-button.psc_panel-button > .ps-button-wrapper >  .ps-button:active,
+:root.psc_dir-rtl .ps_box-button.pst_panel-button > .ps-button-wrapper >  .ps-button:active
+{
+    %BP(box-shadow:%PT_PANEL_TAB_SIDE1_BOXSHADOW_ACTIVE_RTL);  /* BYPASSRTL */
+}
+
+/* Side 2 Panel - Related Content / Simplified Analytics */
+.pst_panel-side2 .ps_box-button.pst_panel-button > .ps-button-wrapper >  .ps-button
+{
+  background: %PT_PANEL_TAB_SIDE2_BACKGROUND;
+  border-color:%PT_PANEL_TAB_SIDE2_BORDER_COLOR;
+}
+
+.pst_panel-side2 .ps_box-button.pst_panel-button > .ps-button-wrapper >  .ps-button:hover, 
+.pst_panel-side2 .ps_box-button.pst_panel-button > .ps-button-wrapper >  .ps-button:active
+{
+  background:%PT_PANEL_TAB_SIDE2_BACKGROUND_HOVER;
+}/*
+ *  PT_BRAND_FLUID_HOMEPAGE
+ *  Branding Template Stylesheet for the Homepage/Dashboards
+ *  (company logo and images are excluded)
+ */
+
+
+/* Homepage Selector */
+.ps_box-button.nuihdr_hpbtn .ps-button .ps-text {
+  color:%PT_HOMEPAGE_TITLE_SELECTOR_TEXT_COLOR;
+}
+
+/* default homepage background */
+:root:not(.psc_mode-ag):not(.psc_mode-md) .pt_homepage { /* 855-01a do not change if running with AG / MD */
+  background-image:none; /* reset to allow usage of only background */
+  background-color:none;/* reset to allow usage of only background */
+  background:%PT_HOMEPAGE_BACKGROUND;
+}
+
+/* change the border for the header bar on the homepage to add contrast */
+:root:not(.psc_mode-ag):not(.psc_mode-md) .pt_homepage .ps_header_bar {/* 855-01a do not change if running with AG / MD */
+    border-bottom: 1px solid %PT_HOMEPAGE_BANNER_BORDER_COLOR;
+}
+
+/* Tile border if necessary */
+:root:not(.psc_mode-ag):not(.psc_mode-md) .nui_pagegb:not(.persmode) .nuitile .nuilp /* 855-01a do not change if running with AG / MD */
+{
+  border:%PT_HOMEPAGE_TILE_BORDER; /* full border specification since default width is 0 */
+  %BP(box-shadow:%PT_HOMEPAGE_TILE_BOXSHADOW));
+}
+
+/* RTL Support for switching shadow */
+:root.psc_dir-rtl .nui_pagegb:not(.persmode) .nuitile .nuilp {
+  %BP(box-shadow:%PT_HOMEPAGE_TILE_BOXSHADOW_RTL);
+}
+
+/* Homepage footer */
+.pt_homepage .lpfooter {
+   background-color:%PT_HOMEPAGE_FOOTER_BACKGROUND_COLOR;
+   background:%PT_HOMEPAGE_FOOTER_BACKGROUND;
+}
+
+
+/**** END HOMEPAGE ****//*
+ *  PT_BRAND_FLUID_LOGO
+ *  Company Logo branding as found on the homepage
+ */
+
+/**** Company Logo *****/
+.nuihdr_logo:after {
+  content:url(%image(%PT_LOGO_IMAGE_NAME));
+  padding-top: %PT_LOGO_TOP_PADDING;
+  margin-%AlignStart: %PT_LOGO_IMAGE_SIDE_MARGIN;
+
+  %PT_LOGO_CSS   /* General css adjustments */
+}
+
+:root.psc_form-small .nuihdr_logo:after {
+  content:url(%image(%PT_LOGO_IMAGE_NAME_SMALL));
+  padding-top: %PT_LOGO_TOP_PADDING_SMALL;
+  margin-%AlignStart: %PT_LOGO_IMAGE_SIDE_MARGIN_SMALL;
+
+  %PT_LOGO_CSS_SMALL  /* General css adjustments */
+}
+
+/**** End Company Logo ****//*
+ * PT_BRAND_FLUID_IMAGES
+ * Branding of images if it is desired to change the images in the banner and/or the Homepage.
+ * The size of the images cannot change or additional styling would be required (not included)
+ * The Company Logo (although an image) is not included in this stylesheet.
+
+ * If you do not require changes in images (can use the originals), you can exclude this stylesheet
+ * in branding.
+ */
+
+/**** BANNER IMAGES *****/
+
+/* only changing the back button image */
+/* Hide the original images */
+.ps_box-button.ps_button_backnav .ps-img
+{opacity:0;}
+
+/* Set up for positioning CSS images */
+.ps_box-button.ps_button_backnav .ps-button
+{position:relative;}
+
+/* Back Button only*/
+/* Set up for CSS replacement */
+.ps_box-button.ps_button_backnav .ps-button:before
+{
+  position:absolute;
+}
+
+/* Back image */
+.ps_box-button.ps_button_backnav .ps-button:before {
+ content:url(%image(%PT_BANNER_BACK_IMAGE));
+
+ %PT_BANNER_BACK_IMAGE_CSS /* general CSS adjustments */
+
+}
+
+/* back button with exit image */
+.ps_box-button.psc_guided-exit .ps-button:before {
+ content:url(%image(%PT_BANNER_EXIT_IMAGE));
+
+ %PT_BANNER_EXIT_IMAGE_CSS /* general css adjustments */
+
+}
+
+
+/* Direction Changes */
+/* 8.55-02a no longer needed
+:root.psc_dir-rtl .ps_box-button.ps_button_backnav .ps-button:before 
+{
+  %BP(transform:scaleX(-1));
+}
+*/
+
+/* media queries for image adjust on back button image */
+@media only screen and (max-width:680px) {
+	.ps_box-button.ps_button_backnav .ps-button:before
+    {
+		%BP(transform:scale(1.4));
+		margin-top:0.2em;
+		margin-%AlignStart:0.25em;
+	}
+
+/* 8.55-02a no longer needed
+	:root.psc_dir-rtl .ps_box-button.ps_button_backnav .ps-button:before
+    {
+		%BP(transform:scaleX(-1) scale(1.4));
+	}
+*/
+}
+/* End back button media queries */
+
+/* All Other Banner Images */ 
+
+/* Hide original images in the banner (all but back button) */
+.ps_box-button.ps_header_button .ps-button .ps-img,
+.ps_box-button.pts_gsearch_go .ps-img
+{opacity:0;}
+
+/* Set up for position CSS images */
+.ps_box-button.ps_header_button .ps-button,
+.ps_box-button.pts_gsearch_go {
+  position:relative;
+}
+
+/* Set up positioning for all buttons including the go button in the search tray */
+:root:not(.psc_mode-ag) .ps_box-button.ps_header_button .ps-button:after, /* 855-806 */
+:root.psc_mode-ag .ps_box-button.ps_header_button:not(.ps_header-next):not(.ps_header-previous) .ps-button:after, /* 855-806 */
+.ps_box-button.pts_gsearch_go .ps-button:after
+{
+  position:absolute;
+  height:1.72em;
+  padding:0.345em;
+  width:1.72em;
+  top:0;
+  %AlignStart:0;
+  %AlignEnd:0;
+  bottom:0;
+  margin-top:-1px; /* special adjust */
+}
+
+
+/* Home button image */
+:root .ps_header_bar .ps_box-button.ps_header-home .ps-button:after {
+ content:url(%image(%PT_BANNER_HOME_IMAGE));
+
+ %PT_BANNER_HOME_IMAGE_CSS  /* general css adjustments */
+
+}
+
+/* Search button image */
+:root .ps_header_bar .ps_box-button.ps_header-gsearch .ps-button:after {
+ content:url(%image(%PT_BANNER_SEARCH_IMAGE));
+
+ %PT_BANNER_SEARCH_IMAGE_CSS   /* general css adjustments */
+
+}
+
+
+/* Required adjustments for image styling for badge count */
+/* Notification Button image and badge adjustments */
+.ps_box-button.ps_header-notify .ps-button {
+  overflow:visible;
+}
+
+/* 855-806 IE fix for alignment */
+:root.ie .ps_header_bar .ps_box-button.ps_header-notify .ps-button {
+  margin-top:-0.25em;
+}
+
+/* required for badge to appear above the CSS image */
+:root .ps_header_bar .ps_box-button.ps_header-notify .ps-button .ps-text {
+  z-index:1;
+}
+
+
+/* Notification button image */
+:root .ps_header_bar .ps_box-button.ps_header-notify .ps-button:after {
+ content:url(%image(%PT_BANNER_NOTIFY_IMAGE));
+
+ %PT_BANNER_NOTIFY_IMAGE_CSS /* general css adjustments */
+
+}
+
+
+/* Action List image */
+:root .ps_header_bar .ps_box-button.psc_menu-act > .ps-button-wrapper > .ps-button:after {
+ content:url(%image(%PT_BANNER_ACTIONLIST_IMAGE));
+
+ %PT_BANNER_ACTIONLIST_IMAGE_CSS   /* general css adjustments */
+
+}
+
+/* NavBar Image with special adjustments */
+:root .ps_header_bar .ps_box-button.ps_header-navbar .ps-button:after {
+ content:url(%image(%PT_BANNER_NAVBAR_IMAGE));
+ margin-top:1px; /* 855-806 */
+ margin-%AlignStart:0.28em; /* 855-806 */
+
+ %PT_BANNER_NAVBAR_IMAGE_CSS    /* general css adjustments */
+
+}
+
+/* Search Tray Go/Execute Button image with adjustments */
+.ps_box-button.pts_gsearch_go .ps-button:after
+{
+   content:url(%image(%PT_SEARCH_TRAY_GOBUTTON_IMAGE));
+   margin-top:0.23em;
+
+   %PT_SEARCH_TRAY_GOBUTTON_IMAGE_CSS  /* general css adjustments */
+
+}
+
+/* Guided Next in List image*/
+:root:not(.psc_mode-ag) .ps_box-button.ps_header-next .ps-button:after { /* 855-806 exclude ag buttons */
+ content:url(%image(%PT_BANNER_NEXT_IMAGE));
+
+ %PT_BANNER_NEXT_IMAGE_CSS    /* general css adjustments */
+
+}
+
+/* Guided Previous in List image */
+:root:not(.psc_mode-ag) .ps_box-button.ps_header-previous .ps-button:after { /* 855-806 exclude ag buttons */
+ content:url(%image(%PT_BANNER_PREVIOUS_IMAGE));
+
+ %PT_BANNER_PREVIOUS_IMAGE_CSS      /* general css adjustments */
+
+}
+
+
+/* Title Selector image for non-homepage pages */
+.psc_title-selector:before
+{
+ content:url(%image(%PT_TITLE_SELECTOR_IMAGE));
+
+ %PT_TITLE_SELECTOR_IMAGE_CSS     /* general css adjustments */
+
+}
+
+/* Simple Directional Changes */
+/* 8.55-02a no longer needed
+:root.psc_dir-rtl .ps_box-button.ps_header-next .ps-button:after,
+:root.psc_dir-rtl .ps_box-button.ps_header-previous .ps-button:after,
+:root.psc_dir-rtl .ps_box-button.ps_header-notify .ps-button:after 
+{
+  %BP(transform:scaleX(-1));
+}
+*/
+
+/**** END BANNER IMAGES ****/
+
+/**** HOMEPAGE/DASHBOARD IMAGES -- Homepage Selector and Refresh images only ****/
+
+/* Hide original Homepage selector image and refresh image */
+.ps_box-button.nuihdr_hpbtn .ps-button .ps-img,
+.ps_box-button.lprefresh .ps-button .ps-img
+{opacity:0;}
+
+/* Set up for CSS replacements */
+.ps_box-button.nuihdr_hpbtn .ps-button,
+.ps_box-button.lprefresh .ps-button
+{position:relative;}
+
+/* Refresh Image in footer */
+.ps_box-button.lprefresh .ps-button:after
+{
+  position:absolute;
+  height:1.72em;
+  padding:0.345em;
+  width:1.72em;
+  top:0;
+  %AlignStart:0;
+  %AlignEnd:0;
+  bottom:0;
+  margin-top:-1px; /* special adjust */
+}
+
+/* Hompage page selector image */
+.ps_box-button.nuihdr_hpbtn .ps-button:before
+{
+  position:absolute;
+  height:1.2em;
+  padding:0.345em;
+  width:1.2em;
+  top:0.45em;
+  %AlignStart:-0.57em;
+  %AlignEnd:auto;
+  bottom:auto;
+  margin-top:0;
+}
+
+/* Homepage Selector Image - should be the same as the Title Selector image in banner*/
+.ps_box-button.nuihdr_hpbtn .ps-button:before
+{
+ content:url(%image(%PT_TITLE_SELECTOR_IMAGE));
+ %BP(transform:scale(0.8)); /* BYPASSRTL - 855-805 added to reduce size of image */
+
+ %PT_TITLE_SELECTOR_IMAGE_CSS  /* general css adjustments */
+
+}
+
+/* Home page refresh button */
+.ps_box-button.lprefresh .ps-button:after {
+ top:%PT_HOMEPAGE_REFRESH_TOP_ADJUST;
+ %AlignStart:%PT_HOMEPAGE_REFRESH_SIDE_ADJUST;
+ content:url(%image(%PT_HOMEPAGE_REFRESH_IMAGE));
+ %BP(transform:scale(%PT_HOMEPAGE_REFRESH_IMAGE_SCALE));
+
+ %PT_HOMEPAGE_REFRESH_IMAGE_CSS   /* general css adjustments */
+
+}
+
+/**** END HOMEPAGE/DASHBOARD IMAGES  ****//*
+ *  PT_BRAND_FLUID_AG_BUTTON_IMAGES
+ *  Brand Activity Guide GUIDED button IMAGES found in the Fluid Banner
+ */
+
+/* Images for Next/Previous */
+/* Hide the original images */
+:root.psc_mode-ag .ps_box-button.ps_header-previous .ps-img,
+:root.psc_mode-ag .ps_box-button.ps_header-next .ps-img
+{opacity:0;}
+
+/* Set up for positioning CSS images */
+:root.psc_mode-ag .ps_box-button.ps_header-previous .ps-button,
+:root.psc_mode-ag .ps_box-button.ps_header-next .ps-button
+{position:relative;}
+
+/* Set up for CSS replacement */
+:root.psc_mode-ag .ps_box-button.ps_header-previous .ps-button:before,
+:root.psc_mode-ag .ps_box-button.ps_header-next .ps-button:after
+{
+  position:absolute;
+}
+
+/* Previous image */
+:root.psc_mode-ag .ps_box-button.ps_header-previous .ps-button:before {
+ content:url(%image(%PT_BANNER_AG_PREV_IMAGE));
+ padding-top:%PT_BANNER_AG_PREV_IMAGE_PADDINGTOP;
+
+ /* contains both width and height property and values*/
+ %PT_BANNER_AG_PREV_IMAGE_DIMENSIONS 
+
+ %PT_BANNER_AG_PREV_IMAGE_CSS /* general CSS adjustments */
+
+}
+
+/* 8.55-02a no longer needed
+:root.psc_dir-rtl.psc_mode-ag .ps_box-button.ps_header-previous .ps-button:before {
+  %BP(transform:scaleX(-1)); 
+}
+*/
+
+/* Next image */
+:root.psc_mode-ag .ps_box-button.ps_header-next .ps-button:after{
+ content:url(%image(%PT_BANNER_AG_NEXT_IMAGE));
+ padding-top:%PT_BANNER_AG_NEXT_IMAGE_PADDING_TOP;
+ %AlignEnd: %PT_BANNER_AG_NEXT_IMAGE_EDGEOFFSET;
+
+ /* contains both width and height property and values*/
+ %PT_BANNER_AG_NEXT_IMAGE_DIMENSIONS
+
+ %PT_BANNER_AG_NEXT_IMAGE_CSS /* general CSS adjustments */
+
+}
+
+/* 8.55-02a no longer needed
+:root.psc_dir-rtl.psc_mode-ag .ps_box-button.ps_header-next .ps-button:after {
+  %BP(transform:scaleX(-1));
+}
+*//*
+ *  PT_BRAND_FLUID_PANEL_IMAGES
+ *  Brand Side Panel Tab IMAGES 
+ */
+
+/* Side1/Side2 Images */
+/* Hide the original images */
+.ps_box-button.pst_panel-button .ps-img,
+.ps_box-button.psc_panel-button .ps-img
+{opacity:0;}
+
+/* Set up for positioning CSS images */
+.ps_box-button.pst_panel-button .ps-button,
+.ps_box-button.psc_panel-button .ps-button
+{position:relative;}
+
+/* Set up for CSS replacement */
+.ps_box-button.pst_panel-button .ps-button:before,
+.ps_box-button.psc_panel-button .ps-button:before
+{
+  position:absolute;
+}
+
+/* Side1 (Default) */
+.pst_panel-side1 .ps_box-button.pst_panel-button .ps-button:before,
+.ps_box-button.psc_panel-button .ps-button:before
+{
+ content:url(%image(%PT_PANEL_TAB_SIDE1_IMAGE));
+ padding-top:%PT_PANEL_TAB_SIDE1_IMAGE_PADDINGTOP;
+ %BP(transform:%PT_PANEL_TAB_SIDE1_IMAGE_TRANSFORM);
+
+ %PT_PANEL_TAB_SIDE1_IMAGE_CSS /* other image adjustments as necessary */
+}
+
+/* Side2 (Default) */
+.pst_panel-side2:not(.pst_panel-systemrc) .ps_box-button.pst_panel-button .ps-button:before
+{
+ content:url(%image(%PT_PANEL_TAB_SIDE2_IMAGE));
+ padding-top:%PT_PANEL_TAB_SIDE2_IMAGE_PADDINGTOP;
+ %BP(transform:%PT_PANEL_TAB_SIDE2_IMAGE_TRANSFORM);
+
+ %PT_PANEL_TAB_SIDE2_IMAGE_CSS /* other image adjustments as necessary */
+}
+
+/* Side2 - Related Content Specific */
+.pst_panel-side2.pst_panel-systemrc .ps_box-button.pst_panel-button .ps-button:before
+{
+ content:url(%image(%PT_PANEL_TAB_RC_IMAGE));
+ padding-top:%PT_PANEL_TAB_RC_IMAGE_PADDINGTOP;
+ %BP(transform:%PT_PANEL_TAB_RC_IMAGE_TRANSFORM);
+
+ %PT_PANEL_TAB_RC_IMAGE_CSS /* other image adjustments as necessary */
+}
+
+.ps_box-button.nuihdr_hpbtn {
+/*  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;*/
+}
+
+.nuihdr_hpbtn a {
+    border-left: 1px solid #123b18 !important;
+    border-right: 1px solid #123b18 !important;
+    border-bottom: 1px solid #123b18 !important;
+    border-top: 1px solid #123b18 !important;
+    background-image: %PT_BANNER_BACK_BACKGROUND_IMAGE !important;
+    --webkit-box-shadow: none !important;
+    --moz-box-shadow: none !important;
+    --ms-box-shadow: none !important;
+    box-shadow: none !important;
+    padding: 0em .25em !important;
+    padding-left: 2em !important;
+    outline-width: 0;
+    font-weight: bolder;
+    font-size: 15.2px;
+    margin-top: .90px;
+}
+
+.nuihdr_hpbtn a:hover {
+	background-image: %PT_BANNER_BACK_BACKGROUND_IMAGE_HOVER !important;
+}
+
+.nuihdr_hpbtn a:active {
+	background-image: %PT_BANNER_BACK_BACKGROUND_IMAGE_ACTIVE !important;
+}
+
+/* Fluid - Display DBName for non-Prod environments */
+#nonprd_box {
+   height: 26px;   
+   background-color: %IO_NONPROD_BANNER_BACKGROUND_COLOR;
+   text-align: center;
+}
+#nonprd_info {
+   color: %IO_NONPROD_BANNER_TEXT_COLOR;
+   line-height: 26px;
+   font-weight: bold;
+   padding-right: 10px;
+}
