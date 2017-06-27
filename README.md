@@ -24,6 +24,15 @@ After the Migration Project is loaded, change the theme for your application.
 
 To change the logo, you can upload a new image file to use.
 
+## Colors
+
+| Theme  | Main   | Light  | Dark   | Border | Hover  | Active |
+| -----  | ------ | ------ | ------ | ------ | ------ | ------ | 
+| Blue   | 00849b | 0098b3 | 006c80 | 00414d | 005766 | 002b33 |
+| Green  | 247530 | 2a8938 | 1e6228 | 123b18 | 184e20 | 0c2710 | 
+|        | 30%    | 35%    | 25%    | 15%    | 20%    | 10%    | 
+| Purple | 684dcb | 8a75d7 | 4f34b2 | 2c1d63 | 352277 | 23174f | 
+|        | 55%    | 65%    | 45 %   | 25%    | 30%    | 20%    |
 
 ## Create a new Theme
 
@@ -48,5 +57,4 @@ To change the logo, you can upload a new image file to use.
 1. Change the Homepage Header, Macro Set, and Fluid Global Override Stylesheet
 1. Change the Default Branding to use the new theme.
 1. If needed, use the Assign Theme page to change role assignments to use the new theme.
-
 
