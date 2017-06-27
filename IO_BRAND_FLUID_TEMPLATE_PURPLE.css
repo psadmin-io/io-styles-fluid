@@ -1,11 +1,11 @@
 /*   
 Green Theme Colors
-Dark: 	#1e6228 25%			#006c80;
-Main: 	#247530 30%			#00849b; 
-Light: 	#2a8938 35%			#0098b3;
-Border: #123b18 15%			#00414d; 
-Hover: 	#184e20 20%			#005766; 
-Active: #0c2710 10%			#002b33;
+Main: 	684dcb	#247530 30%			#00849b; 
+Light: 	8a75d7	#2a8938 35%			#0098b3;
+Dark: 	4f34b2 	#1e6228 25%			#006c80;
+Border: 2c1d63	#123b18 15%			#00414d; 
+Hover: 	352277	#184e20 20%			#005766; 
+Active: 23174f	#0c2710 10%			#002b33;
 https://www.w3schools.com/colors/colors_picker.asp
 */
 
@@ -764,10 +764,10 @@ https://www.w3schools.com/colors/colors_picker.asp
 }
 
 .nuihdr_hpbtn a {
-    border-left: 1px solid #123b18 !important;
-    border-right: 1px solid #123b18 !important;
-    border-bottom: 1px solid #123b18 !important;
-    border-top: 1px solid #123b18 !important;
+    border-left: 1px solid #2c1d63 !important;
+    border-right: 1px solid #2c1d63 !important;
+    border-bottom: 1px solid #2c1d63 !important;
+    border-top: 1px solid #2c1d63 !important;
     background-image: %PT_BANNER_BACK_BACKGROUND_IMAGE !important;
     --webkit-box-shadow: none !important;
     --moz-box-shadow: none !important;
