@@ -2,13 +2,11 @@
 <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
-<style type="text/css">.cls-1{fill:none;stroke-miterlimit:10;stroke-width:25px;stroke:url(#linear-gradient);}
-</style>
+<style type="text/css">.cls-1{fill:none;stroke-miterlimit:10;stroke-width:25px;stroke:url(#linear-gradient);}</style>
 		<linearGradient gradientUnits="userSpaceOnUse" id="linear-gradient" x2="185" y1="92.5" y2="92.5">
-			<stop offset="0" stop-color="#0098b3"/>
-			<stop offset="0.01" stop-color="#0097b2"/>
-			<stop offset="0.69" stop-color="#005969"/>
-			<stop offset="1" stop-color="#00414d"/>
+			<stop offset="0" stop-color="#2a8938"/>
+			<stop offset="0.67" stop-color="#15431c"/>
+			<stop offset="1" stop-color="#0c2710"/>
 		</linearGradient>
 			<circle class="cls-1" cx="92.5" cy="92.5" r="80">
 				<animateTransform attributeName="transform"
