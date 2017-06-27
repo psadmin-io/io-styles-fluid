@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg id="Layer_1" style="enable-background:new 0 0 200 200;" version="1.1" viewBox="0 0 200 200" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+	<style type="text/css">.cls-1{fill:none;stroke-miterlimit:10;stroke-width:25px;stroke:url(#linear-gradient);}</style>
+		<linearGradient gradientUnits="userSpaceOnUse" id="linear-gradient" x2="185" y1="92.5" y2="92.5">
+			<stop offset="0" stop-color="#cc5c00"/>
+			<stop offset="0.15" stop-color="#c75a00"/>
+			<stop offset="0.34" stop-color="#b85300"/>
+			<stop offset="0.54" stop-color="#a04800"/>
+			<stop offset="0.75" stop-color="#7e3800"/>
+			<stop offset="0.97" stop-color="#532500"/>
+			<stop offset="1" stop-color="#4d2200"/>
+		</linearGradient>
+	<circle class="cls-1" cx="92.5" cy="92.5" r="80">
+		<animateTransform attributeName="transform" begin="0s" dur="3s" from="0 92.5 92.5" repeatCount="indefinite" to="360 92.5 92.5" type="rotate"/>
+	</circle>
+</svg>
